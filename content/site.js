@@ -8,7 +8,7 @@
 window.SITE = {
   name: 'Johnice Edwards Tech',
   author: 'Johnice Edwards',
-  url: 'https://slightglimmer.github.io/johnice_edwards_tech/',   // change if the site moves to its own domain
+  url: 'https://johniceedwardstech.com/',   // the site's address (used for the sitemap and RSS feed)
 
   links: {
     email: '',        // e.g. 'hello@yourdomain.com'

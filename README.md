@@ -5,15 +5,33 @@
 A personal technology blog and portfolio. It's plain HTML, CSS and JavaScript, with no framework,
 nothing to install and no build step needed to publish.
 
-## Publishing with GitHub Pages (free)
+## Publishing with GitHub Pages and johniceedwardstech.com
 
-1. On GitHub, open this repository's **Settings → Pages**.
-2. Under "Build and deployment", choose **Deploy from a branch**, pick `main` and `/ (root)`, and save.
-3. After a minute the site is live at **https://slightglimmer.github.io/johnice_edwards_tech/**.
+The site's links, sitemap and RSS feed already use **https://johniceedwardstech.com/**.
 
-All links inside the site are relative, so a custom domain works too. If you add one, update `url`
-in `content/site.js`, replace `https://slightglimmer.github.io/johnice_edwards_tech/` in the HTML
-files and `robots.txt` (find and replace), add a `CNAME` file, and rerun `node tools/build-feeds.mjs`.
+**1. Turn on GitHub Pages:** in this repository go to **Settings → Pages**, choose
+**Deploy from a branch**, pick `main` and `/ (root)`, and save. Until the domain is connected,
+the site is at https://slightglimmer.github.io/johnice_edwards_tech/.
+
+**2. After you buy johniceedwardstech.com**, add these DNS records at your registrar
+(for Namecheap: Domain List → Manage → Advanced DNS) and delete any default "parking" records:
+
+| Type | Host | Value |
+|---|---|---|
+| `A` | `@` | `185.199.108.153` |
+| `A` | `@` | `185.199.109.153` |
+| `A` | `@` | `185.199.110.153` |
+| `A` | `@` | `185.199.111.153` |
+| `CNAME` | `www` | `slightglimmer.github.io.` |
+
+**3. Connect it on GitHub:** back in **Settings → Pages**, type `johniceedwardstech.com` under
+**Custom domain** and save (GitHub adds a `CNAME` file to the repo for you). Once the DNS check
+passes, which can take from a few minutes to a few hours, tick **Enforce HTTPS**.
+
+Optional but recommended: verify the domain under your GitHub account's
+**Settings → Pages → Add a domain**, which stops anyone else from claiming it on GitHub Pages.
+
+To check the DNS yourself: `dig johniceedwardstech.com +short` should list the four addresses above.
 
 ## What's where
 

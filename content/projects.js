@@ -39,7 +39,7 @@ window.PROJECTS = [
     image: 'images/projects/tech-site.jpg',
     imageAlt: 'Screenshot of the Johnice Edwards Tech home page with a dark theme and terminal graphic',
     repo: 'https://github.com/slightglimmer/johnice_edwards_tech',
-    demo: 'https://slightglimmer.github.io/johnice_edwards_tech/',
+    demo: 'https://johniceedwardstech.com/',
     started: '2026-10',
     featured: true,
     published: true

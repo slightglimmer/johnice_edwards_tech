@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /templates/
 
-Sitemap: https://slightglimmer.github.io/johnice_edwards_tech/sitemap.xml
+Sitemap: https://johniceedwardstech.com/sitemap.xml
