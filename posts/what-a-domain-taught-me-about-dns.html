@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DNS Explained Through a Real Domain Setup | Johnice Edwards Tech</title>
+  <meta name="description" content="A, CNAME and TTL stopped being flashcard terms the day I had to point my own domain at GitHub Pages. Here is what each record does and how to check them yourself.">
+  <link rel="canonical" href="https://slightglimmer.github.io/johnice_edwards_tech/posts/what-a-domain-taught-me-about-dns.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Johnice Edwards Tech">
+  <meta property="og:title" content="DNS Explained Through a Real Domain Setup | Johnice Edwards Tech">
+  <meta property="og:description" content="A, CNAME and TTL stopped being flashcard terms the day I had to point my own domain at GitHub Pages. Here is what each record does and how to check them yourself.">
+  <meta property="og:url" content="https://slightglimmer.github.io/johnice_edwards_tech/posts/what-a-domain-taught-me-about-dns.html">
+  <meta property="og:image" content="https://slightglimmer.github.io/johnice_edwards_tech/images/covers/dns.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0A0B10">
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Johnice Edwards Tech" href="../feed.xml">
+  <script>try{var t=localStorage.getItem('jet-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../content/site.js" defer></script>
+  <script src="../content/posts.js" defer></script>
+  <script src="../content/projects.js" defer></script>
+  <script src="../assets/js/layout.js" defer></script>
+  <script src="../assets/js/highlight.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+  <meta property="article:published_time" content="2026-10-09">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What Pointing a Domain at My Website Taught Me About DNS",
+  "description": "A, CNAME and TTL stopped being flashcard terms the day I had to point my own domain at GitHub Pages. Here is what each record does and how to check them yourself.",
+  "datePublished": "2026-10-09",
+  "image": "https://slightglimmer.github.io/johnice_edwards_tech/images/covers/dns.svg",
+  "url": "https://slightglimmer.github.io/johnice_edwards_tech/posts/what-a-domain-taught-me-about-dns.html",
+  "author": {
+    "@type": "Person",
+    "name": "Johnice Edwards",
+    "url": "https://slightglimmer.github.io/johnice_edwards_tech/about.html"
+  }
+}
+  </script>
+</head>
+<body data-root="../" data-page="systems">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="site-header"></header>
+
+<main id="main">
+  <article data-post="what-a-domain-taught-me-about-dns">
+    <header class="article-head wrap-narrow">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../blog.html">Articles</a><span aria-hidden="true">/</span><a href="../systems.html">Systems, Networks &amp; Cloud</a></nav>
+      <h1>What Pointing a Domain at My Website Taught Me About DNS</h1>
+      <p class="lede">A, CNAME and TTL stopped being flashcard terms the day I had to point my own domain at GitHub Pages. Here is what each record does and how to check them yourself.</p>
+      <div class="byline">
+        <img class="avatar" src="../images/avatar.jpg" alt="" width="44" height="44">
+        <div class="byline-text"><strong>Johnice Edwards</strong><span><time datetime="2026-10-09">October 9, 2026</time> · 7 min read</span></div>
+      </div>
+    </header>
+
+    <div class="article-cover">
+      <figure><img src="../images/covers/dns.svg" alt="Diagram of a browser asking a DNS resolver for a domain and being sent to GitHub Pages servers" width="1600" height="900"></figure>
+    </div>
+
+    <div class="wrap-narrow">
+      <div class="prose">
+<p>DNS is one of those topics that shows up early in networking courses. Domain Name System, translates names into IP addresses, the "phone book of the internet." I could recite that. I didn't really <em>get</em> it until I had to connect my own domain, <code>johniceedwardsrealty.com</code>, to a website hosted on GitHub Pages.</p>
+<p>Here's what I learned, explained the way I wish it had been explained to me.</p>
+
+<h2>The problem DNS solves</h2>
+<p>Computers find each other using IP addresses like <code>185.199.108.153</code>. Humans are terrible at remembering those. DNS lets us type a name instead, and quietly looks up the number behind the scenes.</p>
+<p>When you visit a website, roughly this happens:</p>
+<ol>
+  <li>Your browser asks a <strong>DNS resolver</strong> (usually run by your internet provider, or a public one like 1.1.1.1) for the site's address.</li>
+  <li>If the resolver doesn't already have the answer saved, it works its way down the hierarchy: the <strong>root servers</strong> point it to the <strong>.com servers</strong>, which point it to the domain's <strong>authoritative name servers</strong>. For my domain, those belong to Namecheap, where I registered it.</li>
+  <li>The authoritative server returns the records I set up, and the resolver passes the answer back to your browser.</li>
+  <li>Your browser connects to that IP address and asks for the page.</li>
+</ol>
+<figure>
+  <img src="../images/covers/dns.svg" alt="Diagram: the browser asks a DNS resolver; the resolver asks root, .com and Namecheap name servers; the answer is four GitHub Pages IP addresses; the browser then connects to GitHub Pages" width="1600" height="900" loading="lazy">
+  <figcaption>The path a lookup takes. The answer is cached so the next visit can skip most of it.</figcaption>
+</figure>
+
+<h2>The records I actually needed</h2>
+<p>To connect a domain to GitHub Pages, GitHub's documentation asks for two kinds of records. Here's what they look like in a DNS provider's dashboard:</p>
+<table>
+  <thead><tr><th>Type</th><th>Host</th><th>Value</th><th>What it means</th></tr></thead>
+  <tbody>
+    <tr><td><code>A</code></td><td><code>@</code></td><td><code>185.199.108.153</code><br><code>185.199.109.153</code><br><code>185.199.110.153</code><br><code>185.199.111.153</code></td><td>The bare domain points straight to GitHub's servers. Four addresses means if one is unavailable, the others still work.</td></tr>
+    <tr><td><code>CNAME</code></td><td><code>www</code></td><td><code>slightglimmer.github.io.</code></td><td>The <code>www</code> version is an alias: "go look up this other name instead."</td></tr>
+  </tbody>
+</table>
+
+<h3>A records</h3>
+<p>An <strong>A record</strong> maps a name directly to an IPv4 address. The <code>@</code> symbol is shorthand for "the domain itself," with nothing in front of it. (There's also an <strong>AAAA record</strong>, the same idea for IPv6 addresses.)</p>
+
+<h3>CNAME records</h3>
+<p>A <strong>CNAME</strong> (canonical name) record says "this name is really that other name." It's useful because if GitHub ever changes the IP addresses behind <code>slightglimmer.github.io</code>, the <code>www</code> address keeps working without me touching anything.</p>
+<p>One rule tripped me up: you generally can't put a CNAME on the bare domain (<code>@</code>), because the root of a domain also has to hold other records, and a CNAME can't share a name with other records. That's why the bare domain uses A records and <code>www</code> uses the CNAME.</p>
+
+<div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><div><span class="callout-title">That trailing dot</span><p>Notice the dot at the end of <code>slightglimmer.github.io.</code>? In DNS, a trailing dot means "this is a complete name, do not add anything to it." Some dashboards add it for you; some need you to type it.</p></div></div>
+
+<h2>Checking your work from the terminal</h2>
+<p>You don't have to trust a dashboard. The <code>dig</code> command (available on Linux and macOS) asks DNS directly. On Windows, <code>nslookup</code> does a similar job.</p>
+<pre><code class="language-bash"># Ask for the A records of the bare domain
+$ dig johniceedwardsrealty.com A +short
+
+# Ask what the www name is an alias for
+$ dig www.johniceedwardsrealty.com CNAME +short
+
+# Ask one specific public resolver instead of your default one
+$ dig @1.1.1.1 johniceedwardsrealty.com A +short</code></pre>
+<p>If everything is set up correctly, the first command should list the four GitHub Pages addresses, and the second should return <code>slightglimmer.github.io.</code></p>
+<p>Without <code>+short</code>, <code>dig</code> prints the full response, including an <strong>ANSWER SECTION</strong> where each line shows the name, the TTL in seconds, the record type and the value.</p>
+
+<h2>TTL, or why changes aren't instant</h2>
+<p>Every record has a <strong>TTL</strong> (time to live): how many seconds resolvers are allowed to cache the answer before asking again. That caching is why DNS is fast, and also why a change you make might not show up everywhere right away. People call this "propagation," but really it's caches around the internet waiting for their saved copy to expire.</p>
+<p>A practical tip I picked up: if you're about to change a record, lowering its TTL ahead of time means the old answer expires faster when you make the switch.</p>
+
+<h2>Why this was worth learning properly</h2>
+<p>DNS problems show up everywhere in IT: websites that won't load, email that won't deliver, cloud services that can't find each other. "It's always DNS" is a running joke among systems people for a reason. Understanding it from a real setup, rather than a diagram in a textbook, made it stick.</p>
+<p>Next, I want to dig into what happens <em>after</em> the browser has the IP address: TCP connections, TLS certificates and HTTPS. That'll be its own post.</p>
+      </div>
+
+      <footer class="article-foot">
+        <ul class="tag-list" data-post-tags aria-label="Tags"></ul>
+        <section class="author-box" aria-label="About the author">
+          <img class="avatar" src="../images/avatar.jpg" alt="" width="64" height="64">
+          <div>
+            <h2>Written by Johnice Edwards</h2>
+            <p>I'm a cybersecurity student and aspiring systems and cloud engineer, documenting what I learn and build along the way. <a href="../about.html">More about me</a> or <a href="../contact.html">say hello</a>.</p>
+          </div>
+        </section>
+        <nav class="post-nav" data-post-nav aria-label="More articles"></nav>
+      </footer>
+    </div>
+  </article>
+
+  <section class="section-tight" aria-labelledby="related-title">
+    <div class="wrap">
+      <div class="section-head"><div class="stack"><h2 id="related-title" style="font-size:28px">Related reading</h2></div><a class="section-link" href="../blog.html">All articles →</a></div>
+      <div class="grid grid-3" data-related></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

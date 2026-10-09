@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Johnice Edwards Tech</title>
+  <link>https://slightglimmer.github.io/johnice_edwards_tech/</link>
+  <description>Learning technology, building things, and documenting the journey.</description>
+  <language>en-us</language>
+  <atom:link href="https://slightglimmer.github.io/johnice_edwards_tech/feed.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>Hello, World: Why I Am Documenting My Tech Journey</title>
+    <link>https://slightglimmer.github.io/johnice_edwards_tech/posts/hello-world.html</link>
+    <guid>https://slightglimmer.github.io/johnice_edwards_tech/posts/hello-world.html</guid>
+    <pubDate>Fri, 09 Oct 2026 12:00:00 GMT</pubDate>
+    <description>I am a cybersecurity student who wants to become a systems or cloud engineer. This is where I write down what I learn, what I build, and what goes sideways.</description>
+    <category>career</category>
+    <category>cybersecurity</category>
+    <category>learning-in-public</category>
+  </item>
+  <item>
+    <title>Building This Site With an AI Coding Assistant</title>
+    <link>https://slightglimmer.github.io/johnice_edwards_tech/posts/building-this-site-with-an-ai-coding-assistant.html</link>
+    <guid>https://slightglimmer.github.io/johnice_edwards_tech/posts/building-this-site-with-an-ai-coding-assistant.html</guid>
+    <pubDate>Fri, 09 Oct 2026 12:00:00 GMT</pubDate>
+    <description>I wrote a detailed brief, an AI coding assistant built the first version, and I am responsible for every line. What that process looks like and the rules I set for it.</description>
+    <category>ai-tools</category>
+    <category>web</category>
+    <category>javascript</category>
+    <category>this-site</category>
+  </item>
+  <item>
+    <title>What Pointing a Domain at My Website Taught Me About DNS</title>
+    <link>https://slightglimmer.github.io/johnice_edwards_tech/posts/what-a-domain-taught-me-about-dns.html</link>
+    <guid>https://slightglimmer.github.io/johnice_edwards_tech/posts/what-a-domain-taught-me-about-dns.html</guid>
+    <pubDate>Fri, 09 Oct 2026 12:00:00 GMT</pubDate>
+    <description>A, CNAME and TTL stopped being flashcard terms the day I had to point my own domain at GitHub Pages. Here is what each record does and how to check them yourself.</description>
+    <category>dns</category>
+    <category>networking</category>
+    <category>github-pages</category>
+    <category>beginner</category>
+  </item>
+</channel>
+</rss>

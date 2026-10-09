@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <radialGradient id="a" cx="0.5" cy="0.4" r="0.6"><stop offset="0" stop-color="#B9A2FF" stop-opacity=".35"/><stop offset="1" stop-color="#B9A2FF" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6E95FF"/><stop offset="1" stop-color="#C9A8FF"/></linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" stroke="#fff" stroke-opacity=".05"/></pattern>
+  </defs>
+  <rect width="1600" height="900" fill="#0B0D14"/><rect width="1600" height="900" fill="url(#grid)"/><rect width="1600" height="900" fill="url(#a)"/>
+  <g stroke-dasharray="14 12" stroke="url(#g)" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M600 470 800 300l200 170v230H600Z"/>
+    <path d="M750 700V580h100v120"/>
+  </g>
+  <g stroke="#9DB6FF" stroke-width="3" stroke-opacity=".7"><path d="M800 300V200M1000 470h170M600 470H430M1000 640h170M600 640H430"/></g>
+  <g fill="#0B0D14" stroke="url(#g)" stroke-width="4">
+    <circle cx="800" cy="180" r="26"/><circle cx="1190" cy="470" r="26"/><circle cx="410" cy="470" r="26"/><circle cx="1190" cy="640" r="26"/><circle cx="410" cy="640" r="26"/>
+  </g>
+  <path d="M800 166l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#C9A8FF"/>
+  <g font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="26" fill="#C3C8D8">
+    <text x="1236" y="479">renovation planner</text>
+    <text x="1236" y="649">maintenance reminders</text>
+    <text x="364" y="479" text-anchor="end">plain-English Q&amp;A</text>
+    <text x="364" y="649" text-anchor="end">budget helper</text>
+  </g>
+  <g transform="translate(800 120)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="24" fill="#F4C67A">
+    <text>status: planned</text>
+  </g>
+</svg>

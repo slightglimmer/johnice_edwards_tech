@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Johnice Edwards Tech (In Progress) | Projects | Johnice Edwards Tech</title>
+  <meta name="description" content="This website: a framework-free portfolio and blog with a small content system, drafts, tags, related posts and a dark-first design that can grow with my career.">
+  <link rel="canonical" href="https://slightglimmer.github.io/johnice_edwards_tech/projects/johnice-edwards-tech.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Johnice Edwards Tech">
+  <meta property="og:title" content="Johnice Edwards Tech (In Progress) | Projects | Johnice Edwards Tech">
+  <meta property="og:description" content="This website: a framework-free portfolio and blog with a small content system, drafts, tags, related posts and a dark-first design that can grow with my career.">
+  <meta property="og:url" content="https://slightglimmer.github.io/johnice_edwards_tech/projects/johnice-edwards-tech.html">
+  <meta property="og:image" content="https://slightglimmer.github.io/johnice_edwards_tech/images/projects/tech-site.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0A0B10">
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Johnice Edwards Tech" href="../feed.xml">
+  <script>try{var t=localStorage.getItem('jet-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../content/site.js" defer></script>
+  <script src="../content/posts.js" defer></script>
+  <script src="../content/projects.js" defer></script>
+  <script src="../assets/js/layout.js" defer></script>
+  <script src="../assets/js/highlight.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Johnice Edwards Tech",
+  "description": "This website: a framework-free portfolio and blog with a small content system, drafts, tags, related posts and a dark-first design that can grow with my career.",
+  "url": "https://slightglimmer.github.io/johnice_edwards_tech/projects/johnice-edwards-tech.html",
+  "creator": {
+    "@type": "Person",
+    "name": "Johnice Edwards"
+  }
+}
+  </script>
+</head>
+<body data-root="../" data-page="projects">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="site-header"></header>
+
+<main id="main">
+  <section class="page-head backdrop" aria-labelledby="page-title">
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../projects.html">Projects</a><span aria-hidden="true">/</span><span>Johnice Edwards Tech</span></nav>
+      <h1 id="page-title">Johnice Edwards Tech</h1>
+      <p class="lede">This website: a framework-free portfolio and blog with a small content system, drafts, tags, related posts and a dark-first design that can grow with my career.</p>
+    </div>
+  </section>
+
+  <div class="wrap project-layout" style="padding-bottom:96px">
+    <div class="prose">
+<h2>Overview</h2>
+<p>Johnice Edwards Tech is the site you're reading. It's a personal technology blog and portfolio where I document what I'm learning in cybersecurity, systems, networking, cloud and AI, and show what I'm building.</p>
+<figure class="shot"><div class="shot-frame"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="../images/projects/tech-site.jpg" alt="The Johnice Edwards Tech home page in its dark theme, with a large headline and a terminal graphic" loading="lazy" width="1600" height="900"></div><figcaption>The home page, dark theme.</figcaption></figure>
+
+<h2>The idea</h2>
+<p>I already had a website about homes and real estate. My technology journey needed its own space: somewhere a recruiter could quickly see what I'm learning and building, and somewhere I could write honestly about the process. Two rules shaped it from the start:</p>
+<ul>
+  <li><strong>Honesty over polish.</strong> No invented credentials or made-up projects. Every project is labeled Planned, In Progress or Completed.</li>
+  <li><strong>Easy to grow.</strong> Publishing an article or adding a project should never require redesigning anything.</li>
+</ul>
+
+<h2>How it's built</h2>
+<p>The site is plain HTML, CSS and JavaScript, with no framework and no build step needed to publish. That keeps it fast, free to host on GitHub Pages, and easy to understand while I'm still learning.</p>
+<ul>
+  <li><strong>Content lists.</strong> Every article and project is described once in <code>content/posts.js</code> and <code>content/projects.js</code>. The home page, section pages, search, tag filters and related posts all read from those lists.</li>
+  <li><strong>Drafts.</strong> Setting <code>status: 'draft'</code> hides an article from every list, and the page itself is marked <code>noindex</code> for search engines.</li>
+  <li><strong>Shared layout.</strong> The header and footer are written once in <code>assets/js/layout.js</code>.</li>
+  <li><strong>Code blocks.</strong> A small built-in syntax highlighter (about 100 lines) colors Bash, JavaScript, JSON, Python, YAML and HTML, with a copy button. No third-party library needed.</li>
+  <li><strong>Design.</strong> Dark mode first, with a light theme toggle. Colors and type are tokens at the top of one stylesheet. Animations respect the reduced-motion setting.</li>
+  <li><strong>SEO.</strong> Every page has its own title, description, canonical link and social preview tags, plus a sitemap and RSS feed generated by a small Node script.</li>
+</ul>
+<pre><code class="language-bash"># Regenerate the sitemap and RSS feed after publishing
+$ cd tech
+$ node tools/build-feeds.mjs</code></pre>
+<figure class="shot"><div class="shot-frame"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="../images/projects/tech-article.jpg" alt="An article page on Johnice Edwards Tech showing a large headline, byline and a DNS diagram" loading="lazy" width="1600" height="900"></div><figcaption>An article page with a technical diagram.</figcaption></figure>
+
+<h2>Built with an AI coding assistant</h2>
+<p>I wrote a detailed brief and an AI coding assistant built the first version. I wrote about that process, and why I'm disclosing it, in <a href="../posts/building-this-site-with-an-ai-coding-assistant.html">Building This Site With an AI Coding Assistant</a>.</p>
+
+<h2>Challenges and lessons</h2>
+<ul>
+  <li><strong>Don't break what already works.</strong> My realty website was already live, so the tech site was built as a separate project in its own repository instead of replacing it.</li>
+  <li><strong>Empty is better than fake.</strong> It's tempting to fill a new portfolio with impressive-sounding placeholders. Section pages show an honest "first article coming soon" instead.</li>
+  <li><strong>Accessibility takes deliberate work.</strong> Skip links, focus styles, alt text, labeled buttons and keyboard-friendly menus don't happen by accident.</li>
+</ul>
+
+<h2>Status and what's next</h2>
+<ol class="timeline">
+  <li class="done"><strong>Launch the structure.</strong> Sections, content lists, project pages, drafts, tags and related posts.</li>
+  <li class="done"><strong>First articles.</strong> An introduction, a DNS explainer and a write-up about building with AI.</li>
+  <li><strong>Add my links.</strong> GitHub, LinkedIn and resume, once they're ready.</li>
+  <li><strong>Learn the codebase.</strong> Make my own edits and document what I learn.</li>
+  <li><strong>Keep publishing.</strong> Diaries, labs and experiments as I go.</li>
+</ol>
+    </div>
+    <aside class="project-aside" data-project="johnice-edwards-tech" aria-label="Project details"></aside>
+  </div>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <radialGradient id="a" cx="0.2" cy="0.85" r="0.6"><stop offset="0" stop-color="#4F7BFF" stop-opacity=".4"/><stop offset="1" stop-color="#4F7BFF" stop-opacity="0"/></radialGradient>
+    <radialGradient id="b" cx="0.85" cy="0.15" r="0.6"><stop offset="0" stop-color="#B9A2FF" stop-opacity=".42"/><stop offset="1" stop-color="#B9A2FF" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#6E95FF"/><stop offset="1" stop-color="#C9A8FF"/></linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#fff" stroke-opacity=".05"/></pattern>
+  </defs>
+  <rect width="1600" height="900" fill="#0B0D14"/><rect width="1600" height="900" fill="url(#grid)"/><rect width="1600" height="900" fill="url(#a)"/><rect width="1600" height="900" fill="url(#b)"/>
+  <!-- chat -->
+  <g font-family="Inter, 'Segoe UI', system-ui, sans-serif" font-size="26">
+    <g transform="translate(150 210)">
+      <rect width="520" height="128" rx="26" fill="#1A1E2C" stroke="#fff" stroke-opacity=".12" stroke-width="2"/>
+      <text x="32" y="56" fill="#E9ECF5">No fake projects. Label things</text>
+      <text x="32" y="94" fill="#E9ECF5">Planned, In Progress or Completed.</text>
+    </g>
+    <g transform="translate(230 380)">
+      <rect width="440" height="88" rx="26" fill="url(#g)" opacity=".95"/>
+      <text x="32" y="55" fill="#0A0B10" font-weight="600">Got it. Statuses added ✓</text>
+    </g>
+    <g transform="translate(150 510)">
+      <rect width="520" height="88" rx="26" fill="#1A1E2C" stroke="#fff" stroke-opacity=".12" stroke-width="2"/>
+      <text x="32" y="55" fill="#E9ECF5">Explain how the content list works.</text>
+    </g>
+  </g>
+  <!-- connector -->
+  <path d="M690 450 C 760 450, 780 450, 840 450" stroke="url(#g)" stroke-width="4" fill="none" stroke-dasharray="6 10"/>
+  <circle cx="690" cy="450" r="8" fill="#6E95FF"/><circle cx="840" cy="450" r="8" fill="#C9A8FF"/>
+  <!-- editor -->
+  <g transform="translate(860 180)">
+    <rect width="600" height="540" rx="26" fill="#0F121B" stroke="#fff" stroke-opacity=".14" stroke-width="2"/>
+    <path d="M0 26a26 26 0 0 1 26-26h548a26 26 0 0 1 26 26v32H0Z" fill="#fff" fill-opacity=".04"/>
+    <text x="30" y="38" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="18" fill="#8C93A8">content/projects.js</text>
+    <g font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="24">
+      <text x="30" y="118" fill="#C9A8FF">window<tspan fill="#8C93A8">.</tspan><tspan fill="#E9ECF5">PROJECTS</tspan> <tspan fill="#8C93A8">= [{</tspan></text>
+      <text x="60" y="166" fill="#FFB38F">slug<tspan fill="#8C93A8">: </tspan><tspan fill="#9EE6B8">'johnice-edwards-tech'</tspan><tspan fill="#8C93A8">,</tspan></text>
+      <text x="60" y="214" fill="#FFB38F">status<tspan fill="#8C93A8">: </tspan><tspan fill="#9EE6B8">'in-progress'</tspan><tspan fill="#8C93A8">,</tspan></text>
+      <text x="60" y="262" fill="#FFB38F">tech<tspan fill="#8C93A8">: [</tspan><tspan fill="#9EE6B8">'HTML'</tspan><tspan fill="#8C93A8">, </tspan><tspan fill="#9EE6B8">'CSS'</tspan><tspan fill="#8C93A8">, </tspan><tspan fill="#9EE6B8">'JS'</tspan><tspan fill="#8C93A8">],</tspan></text>
+      <text x="60" y="310" fill="#FFB38F">featured<tspan fill="#8C93A8">: </tspan><tspan fill="#C9A8FF">true</tspan></text>
+      <text x="30" y="358" fill="#8C93A8">}];</text>
+      <text x="30" y="430" fill="#6B7390" font-style="italic">// reviewed by a human: me</text>
+    </g>
+    <rect x="30" y="470" width="14" height="30" fill="url(#g)"/>
+  </g>
+</svg>

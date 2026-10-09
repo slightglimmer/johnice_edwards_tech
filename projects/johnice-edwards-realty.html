@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Johnice Edwards Realty (Completed) | Projects | Johnice Edwards Tech</title>
+  <meta name="description" content="A homeownership journal on my own domain, with a data-driven article list, search, category pages and a working contact form.">
+  <link rel="canonical" href="https://slightglimmer.github.io/johnice_edwards_tech/projects/johnice-edwards-realty.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Johnice Edwards Tech">
+  <meta property="og:title" content="Johnice Edwards Realty (Completed) | Projects | Johnice Edwards Tech">
+  <meta property="og:description" content="A homeownership journal on my own domain, with a data-driven article list, search, category pages and a working contact form.">
+  <meta property="og:url" content="https://slightglimmer.github.io/johnice_edwards_tech/projects/johnice-edwards-realty.html">
+  <meta property="og:image" content="https://slightglimmer.github.io/johnice_edwards_tech/images/projects/realty-site.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0A0B10">
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Johnice Edwards Tech" href="../feed.xml">
+  <script>try{var t=localStorage.getItem('jet-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../content/site.js" defer></script>
+  <script src="../content/posts.js" defer></script>
+  <script src="../content/projects.js" defer></script>
+  <script src="../assets/js/layout.js" defer></script>
+  <script src="../assets/js/highlight.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Johnice Edwards Realty",
+  "description": "A homeownership journal on my own domain, with a data-driven article list, search, category pages and a working contact form.",
+  "url": "https://slightglimmer.github.io/johnice_edwards_tech/projects/johnice-edwards-realty.html",
+  "creator": {
+    "@type": "Person",
+    "name": "Johnice Edwards"
+  }
+}
+  </script>
+</head>
+<body data-root="../" data-page="projects">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="site-header"></header>
+
+<main id="main">
+  <section class="page-head backdrop" aria-labelledby="page-title">
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../projects.html">Projects</a><span aria-hidden="true">/</span><span>Johnice Edwards Realty</span></nav>
+      <h1 id="page-title">Johnice Edwards Realty</h1>
+      <p class="lede">A homeownership journal on my own domain, with a data-driven article list, search, category pages and a working contact form.</p>
+    </div>
+  </section>
+
+  <div class="wrap project-layout" style="padding-bottom:96px">
+    <div class="prose">
+<h2>Overview</h2>
+<p>Johnice Edwards Realty is a homeownership journal I run at <a href="https://johniceedwardsrealty.com/">johniceedwardsrealty.com</a>. I'm a licensed real estate agent in Michigan, but the site isn't about listings. It's about everything else that comes with owning a home: projects, beautiful houses, home technology and the money side.</p>
+<figure class="shot"><div class="shot-frame"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="../images/projects/realty-site.jpg" alt="The Johnice Edwards Realty home page with a warm ivory design, serif headline and a photo of a sunlit living room" loading="lazy" width="1600" height="900"></div><figcaption>The live home page.</figcaption></figure>
+
+<h2>The idea</h2>
+<p>I wanted something different from a traditional real estate website: an educational journal where future buyers and current homeowners can find practical information, with room to grow into helpful tools later.</p>
+
+<h2>What it does</h2>
+<ul>
+  <li><strong>A single article list</strong> powers the home page, the journal, four category pages, story counts and search.</li>
+  <li><strong>Search and category filters</strong> on the journal page.</li>
+  <li><strong>Contact and newsletter forms</strong> that send through Formspree, with client-side validation and clear success and error messages.</li>
+  <li><strong>Photo fallbacks:</strong> if an image is missing, a soft colored placeholder appears instead of a broken image.</li>
+  <li><strong>Custom domain</strong> on GitHub Pages, set up with A and CNAME records.</li>
+</ul>
+<figure class="shot"><div class="shot-frame"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="../images/projects/realty-blog.jpg" alt="The Johnice Edwards Realty journal page with search box and category filter buttons" loading="lazy" width="1600" height="900"></div><figcaption>The journal page with search and category filters.</figcaption></figure>
+
+<h2>How I built it</h2>
+<p>Like this site, it's plain HTML, CSS and JavaScript hosted for free on GitHub Pages, built with the help of an AI coding assistant. The approach worked well enough that I reused it here: describe content once in a JavaScript list and let small scripts draw the pages.</p>
+
+<h2>Challenges and lessons</h2>
+<ul>
+  <li><strong>DNS clicked for real.</strong> Pointing the domain at GitHub Pages turned A records, CNAMEs and TTLs from flashcard terms into things I've actually configured. I wrote it up in <a href="../posts/what-a-domain-taught-me-about-dns.html">What Pointing a Domain at My Website Taught Me About DNS</a>.</li>
+  <li><strong>Forms without a server.</strong> A static site has no backend, so form submissions go to a form service. That's a good trade-off for a small site, with limits worth knowing (like monthly submission caps).</li>
+  <li><strong>Legal details matter.</strong> As a licensed agent, I needed licensing disclosures, a privacy policy and terms on the site.</li>
+</ul>
+    </div>
+    <aside class="project-aside" data-project="johnice-edwards-realty" aria-label="Project details"></aside>
+  </div>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

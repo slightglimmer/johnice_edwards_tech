@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects &amp; Experiments | Johnice Edwards Tech</title>
+  <meta name="description" content="Projects and experiments by Johnice Edwards: websites, AI tools, automation and labs, each honestly labeled Planned, In Progress or Completed.">
+  <link rel="canonical" href="https://slightglimmer.github.io/johnice_edwards_tech/projects.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Johnice Edwards Tech">
+  <meta property="og:title" content="Projects &amp; Experiments | Johnice Edwards Tech">
+  <meta property="og:description" content="Projects and experiments by Johnice Edwards: websites, AI tools, automation and labs, each honestly labeled Planned, In Progress or Completed.">
+  <meta property="og:url" content="https://slightglimmer.github.io/johnice_edwards_tech/projects.html">
+  <meta property="og:image" content="https://slightglimmer.github.io/johnice_edwards_tech/images/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0A0B10">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Johnice Edwards Tech" href="feed.xml">
+  <script>try{var t=localStorage.getItem('jet-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="content/site.js" defer></script>
+  <script src="content/posts.js" defer></script>
+  <script src="content/projects.js" defer></script>
+  <script src="assets/js/layout.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body data-root="" data-page="projects">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="site-header"></header>
+
+<main id="main">
+<section class="page-head backdrop" aria-labelledby="page-title">
+    <div class="wrap">
+      <p class="eyebrow">Projects &amp; Experiments</p>
+      <h1 id="page-title">Things I'm <em>building</em></h1>
+      <p class="lede">Websites, AI experiments, automation and labs. Each one has a write-up covering the idea, how I built it, and what I learned. Statuses are honest: if it says Planned, it doesn't exist yet.</p>
+    </div>
+  </section>
+
+  <section class="section-tight" style="padding-top:0" aria-label="Projects">
+    <div class="wrap">
+      <div class="filters">
+        <div class="chip-row" id="project-filters" role="group" aria-label="Filter by status">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-filter="in-progress" aria-pressed="false">In Progress</button>
+          <button class="chip" type="button" data-filter="completed" aria-pressed="false">Completed</button>
+          <button class="chip" type="button" data-filter="planned" aria-pressed="false">Planned</button>
+        </div>
+      </div>
+      <p class="result-count" id="project-count" aria-live="polite"></p>
+      <div class="grid grid-3" id="project-list" data-projects></div>
+    </div>
+  </section>
+
+  <section class="section-tight" aria-labelledby="legend-title">
+    <div class="wrap">
+      <h2 id="legend-title" style="font-size:22px;margin-bottom:20px">What the labels mean</h2>
+      <div class="grid grid-3">
+        <div class="value"><span class="status status-completed">Completed</span><p style="margin-top:12px">It exists, it works, and you can usually see it live or read the code.</p></div>
+        <div class="value"><span class="status status-in-progress">In Progress</span><p style="margin-top:12px">I'm actively building it. Expect rough edges and frequent updates.</p></div>
+        <div class="value"><span class="status status-planned">Planned</span><p style="margin-top:12px">An idea I've committed to exploring. Nothing is built yet.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

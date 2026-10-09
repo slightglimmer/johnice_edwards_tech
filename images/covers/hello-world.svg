@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <radialGradient id="a" cx="0.2" cy="0.1" r="0.7"><stop offset="0" stop-color="#4F7BFF" stop-opacity=".45"/><stop offset="1" stop-color="#4F7BFF" stop-opacity="0"/></radialGradient>
+    <radialGradient id="b" cx="0.9" cy="0.9" r="0.6"><stop offset="0" stop-color="#B9A2FF" stop-opacity=".4"/><stop offset="1" stop-color="#B9A2FF" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#6E95FF"/><stop offset="1" stop-color="#C9A8FF"/></linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#fff" stroke-opacity=".05"/></pattern>
+  </defs>
+  <rect width="1600" height="900" fill="#0B0D14"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <rect width="1600" height="900" fill="url(#a)"/>
+  <rect width="1600" height="900" fill="url(#b)"/>
+  <g transform="translate(330 190)">
+    <rect width="940" height="520" rx="28" fill="#0F121B" stroke="#fff" stroke-opacity=".14" stroke-width="2"/>
+    <path d="M0 28a28 28 0 0 1 28-28h884a28 28 0 0 1 28 28v36H0Z" fill="#fff" fill-opacity=".04"/>
+    <circle cx="40" cy="32" r="9" fill="#FF8FA8"/><circle cx="70" cy="32" r="9" fill="#F4C67A"/><circle cx="100" cy="32" r="9" fill="#6FE3C8"/>
+    <g font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="38">
+      <text x="56" y="160" fill="#6FE3C8">➜ <tspan fill="#9DB6FF">~</tspan> <tspan fill="#E9ECF5">echo "hello, world"</tspan></text>
+      <text x="56" y="232" fill="#C3C8D8">hello, world</text>
+      <text x="56" y="320" fill="#6FE3C8">➜ <tspan fill="#9DB6FF">~</tspan> <tspan fill="#E9ECF5">./start-documenting.sh</tspan></text>
+      <text x="56" y="392" fill="#C9A8FF">learning · building · writing it down</text>
+      <text x="56" y="470" fill="#6FE3C8">➜ <tspan fill="#9DB6FF">~</tspan></text>
+      <rect x="146" y="438" width="20" height="40" fill="url(#g)"/>
+    </g>
+  </g>
+</svg>
