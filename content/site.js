@@ -11,10 +11,10 @@ window.SITE = {
   url: 'https://johniceedwardstech.com/',   // the site's address (used for the sitemap and RSS feed)
 
   links: {
-    email: '',        // e.g. 'hello@yourdomain.com'
-    github: '',       // e.g. 'https://github.com/your-username'
-    linkedin: '',     // e.g. 'https://www.linkedin.com/in/your-name'
-    resume: ''        // e.g. 'files/johnice-edwards-resume.pdf' (put the PDF in tech/files/)
+    email: 'johnice.edward@gmail.com',
+    github: 'https://github.com/slightglimmer',
+    linkedin: 'https://www.linkedin.com/in/johnice-edwards/',
+    resume: ''        // e.g. 'files/johnice-edwards-resume.pdf' (put the PDF in a files/ folder)
   },
 
   // Contact form endpoint (Formspree). Messages arrive by email.
